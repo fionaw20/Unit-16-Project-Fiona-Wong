@@ -1,0 +1,322 @@
+<!-- 
+Requirements
+[ yes ] Two interactive drop-down inputs 
+[ yes ] Two additional HTML elements
+[ yes ] two additional CSS selectors
+
+Select ONE Additional Feature to Add  
+[ no ] Feature 1 - Upload a Font to Your Replit 
+[ yes ] Feature 2 - Use a Google Font  
+[ no ] Feature 3 - Include .on(“click”) feature 
+[ no ] Feature 4 - :hover feature 
+[ no ] Feature 5 - Separate Code Into Three Files .html, .css, .js 
+-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Are you Smarter Than a 5th Grader?</title>
+
+       
+        
+        <style>
+
+            
+            
+
+            @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+
+
+            #five-result,
+            #mona-result,
+            #machu-result,
+            #blood-result,
+            #adverb-result {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+                
+            }
+ 
+            body {
+            background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202204/0510/j8JI5ztCZJIN7g9ulMB6Hb0d.png');
+                background-repeat: no-repeat;
+              background-size: cover ;
+                margin: auto;
+                text-align: center;
+            color: rgb(255,255,255);
+                font-family: "Schoolbell", cursive;
+                  font-weight: 400;
+                  font-style: normal;
+                font-size: 25px;
+            }
+
+        select {
+             font-family: "Schoolbell", cursive;
+            font-weight: 400;
+                  font-style: normal;
+                font-size: 25px;
+            color: gold;
+            background-color: #11ffee00;
+            
+        }
+
+            
+           button {
+               font-family: "Schoolbell", cursive;
+                 font-weight: 400;
+                 font-style: normal;
+               font-size: 25px;
+               background-color: rgb(26, 81, 171);
+               color: gold;
+               border: 5px ridge gold;
+           }
+
+            
+          #five-result {
+              background: rgb(77, 175, 255);
+              border: 6px ridge gold;
+              font-size: 24px;
+              height: 80px;
+              margin-top: 10px;
+              margin-bottom: 50px;
+          }   
+
+          #mona-result {
+              background: rgb(109, 189, 252);
+              border: 6px ridge gold;
+              font-size: 24px;
+              height: 80px;
+              margin-top: 10px;
+              margin-bottom: 50px;
+          }    
+
+          #machu-result {
+              background: rgb(127, 196, 250);
+              border: 6px ridge gold;
+              font-size: 24px;
+              height: 80px;
+              margin-top: 10px;
+              margin-bottom: 50px;
+          }    
+
+            #blood-result {
+                  background: rgb(151, 208, 252);
+                  border: 6px ridge gold; 
+                  font-size: 24px;
+                  height: 80px;
+                  margin-top: 10px;
+                  margin-bottom: 50px;
+              }    
+            
+          #adverb-result {
+              background: rgb(182, 221, 250);
+              border: 6px ridge gold;
+              font-size: 24px;
+              height: 80px;
+              margin-top: 10px;
+              margin-bottom: 50px;
+          }    
+
+          
+           
+
+            
+        </style>
+    </head>
+    <body>
+    <a target="_blank" href="https://youtu.be/cXkAOhwyeoI?si=2xk8Fyx2LEDqMnew"> <img src="https://upload.wikimedia.org/wikipedia/en/5/50/AYSTA5G2019Logo.png" width="400px"> </a>
+    <h2>High schoolers may seem smarter, but are they really...? 👀</h2>
+
+
+      <!-- lincoln Question -->
+      <form id="five-form">
+          <label>
+               Whose picture is on the five-dollar bill?
+              <select id="five-answer">
+                  <option value="five1">Benjamin Franklin</option>
+                  <option value="five2">Abraham Lincoln</option>
+                  <option value="five3">Andrew Jackson</option>
+                  <option value="five4">George Washington</option>
+              </select>
+          </label> 
+          <button type="submit">Final Answer?</button>
+      </form>
+      <div id="five-result"></div>
+
+      <!-- leo da vinci Question -->
+      <form id="mona-form">
+        <label>
+             Who painted the Mona Lisa?
+            <select id="mona-answer">
+                <option value="mona1">Claude Monet</option>
+                <option value="mona2">Michelangelo</option>
+                <option value="mona3">Vincent Van Gogh</option>
+                <option value="mona4">Leonardo Da Vinci</option>
+            </select>
+        </label> 
+        <button type="submit">Final Answer?</button>
+      </form>
+      <div id="mona-result"></div>
+
+      <!-- incas Question -->
+      <form id="machu-form">
+        <label>
+         What ancient civilization built the Machu Picchu complex in Peru?
+          
+            <select id="machu-answer">
+                <option value="machu1">Incas</option>
+                <option value="machu2">Aztecs</option>
+                <option value="machu3">Mayans</option>
+                <option value="machu4">Olmecs</option>
+            </select>
+        </label> 
+        <button type="submit">Final Answer?</button>
+      </form>
+      <div id="machu-result"></div>
+
+        <!-- AB Question -->
+          <form id="blood-form">
+            <label>
+              Which blood type is known as the universal recipient?
+                <select id="blood-answer">
+                    <option value="blood1">A</option>
+                    <option value="blood2">B</option>
+                    <option value="blood3">AB</option>
+                    <option value="blood4">O</option>
+                </select>
+            </label> 
+            <button type="submit">Final Answer?</button>
+          </form>
+          <div id="blood-result"></div>
+        
+      <!-- adverb Question -->
+      <form id="adverb-form">
+        <label>
+         In the sentence, “Ms. Hall is a very good teacher,” what part of speech is the word “very”?
+            <select id="adverb-answer">
+                <option value="adverb1">Conjunction</option>
+                <option value="adverb2">Verb</option>
+                <option value="adverb3">Adjective</option>
+                <option value="adverb4">Adverb</option>
+            </select>
+        </label> 
+        <button type="submit">Final Answer?</button>
+      </form>
+      <div id="adverb-result"></div>
+
+    
+        
+
+      
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+
+        
+        
+        //listen for submit
+        $("#five-form").on("submit", function(event) {
+  
+              event.preventDefault(); 
+        
+              var $answer = $("#five-answer"); 
+              var answer = $answer.val(); 
+        
+              if (answer === "five2") { 
+                  $("#five-result").text("Correct!");
+                   $("#five-result").css("font-size", "50px");
+                 
+              }
+              else {  
+                  $("#five-result").text("Incorrect!");
+                   $("#five-result").css("font-size", "50px");
+                 
+              }
+        });
+
+   
+        $("#mona-form").on("submit", function(event) {
+
+              event.preventDefault(); 
+      
+              var $answer = $("#mona-answer"); 
+              var answer = $answer.val(); 
+      
+              if (answer === "mona4") { 
+                  $("#mona-result").text("Correct!");
+                   $("#mona-result").css("font-size", "50px");
+            
+              }
+              else {  
+                  $("#mona-result").text("Incorrect!");
+                   $("#mona-result").css("font-size", "50px");
+              }
+        });
+
+      $("#machu-form").on("submit", function(event) {
+
+            event.preventDefault(); 
+
+            var $answer = $("#machu-answer"); 
+            var answer = $answer.val(); 
+
+            if (answer === "machu1") { 
+                $("#machu-result").text("Correct!");
+                $("#machu-result").css("font-size", "50px");
+            }
+            else {  
+                $("#machu-result").text("Incorrect!");
+                $("#machu-result").css("font-size", "50px");
+            }
+      });
+
+
+          $("#blood-form").on("submit", function(event) {
+
+                event.preventDefault(); 
+
+                var $answer = $("#blood-answer"); 
+                var answer = $answer.val(); 
+
+                if (answer === "blood3") { 
+                    $("#blood-result").text("Correct!");
+                    $("#blood-result").css("font-size", "50px");
+                }
+                else {  
+                    $("#blood-result").text("Incorrect!");
+                    $("#blood-result").css("font-size", "50px");
+                }
+          });
+
+
+        
+      $("#adverb-form").on("submit", function(event) {
+
+            event.preventDefault(); 
+
+            var $answer = $("#adverb-answer"); 
+            var answer = $answer.val(); 
+
+            if (answer === "adverb4") { 
+                $("#adverb-result").text("Correct!");
+                $("#adverb-result").css("font-size", "50px");
+            }
+            else {  
+                $("#adverb-result").text("Incorrect!");
+                $("#adverb-result").css("font-size", "50px");
+            }
+      });
+
+
+      
+    </script>
+       
+
+        
+    </body>
+</html>
